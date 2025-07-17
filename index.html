@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>Farhod Mukhamadiev — Resume</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
@@ -56,13 +56,18 @@
 
       h1 {
         color: #2e3a59;
-        font-size: 2rem;
+        font-size: 28px;
       }
 
       h2 {
+        font-size: 20px;
         color: #2e3a59;
-        font-size: 1.5rem;
-        font-weight: 700;
+      }
+
+      .title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #555;
       }
 
       img {
@@ -119,8 +124,8 @@
   <body>
     <header>
       <div class="lang-switch">
-        <button onclick="switchLang('en')">🇬🇧 EN</button>
-        <button onclick="switchLang('ru')">🇷🇺 RU</button>
+        <button onclick="switchLang('en')">EN</button>
+        <button onclick="switchLang('ru')">RU</button>
       </div>
       <button class="print-btn" onclick="window.print()">
         🖨 Print / Save as PDF
@@ -129,31 +134,87 @@
 
     <div id="en" class="resume-section active">
       <h1>Farhod Mukhamadiev</h1>
-      <h2>Frontend Developer</h2>
+      <p class="title">Frontend Developer</p>
       <img src="images/farhod.jpg" alt="Farhod's Photo" />
+      <div class="section contact">
+        <p>Email: farhodmuhamadiev4@gmail.com</p>
+        <p>Telegram: @farhodmuhamadiev68</p>
+        <p>GitHub: <a href="https://github.com/farabek">farabek</a></p>
+        <p>
+          Portfolio:
+          <a href="https://farabek.github.io/my-portfolio/">my-portfolio</a>
+        </p>
+        <p>
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/farhod-rustam/">farhod-rustam</a>
+        </p>
+        <p>Location: Tashkent, Uzbekistan</p>
+        <p>
+          Languages: English (Intermediate), Russian (Fluent), Uzbek (Native)
+        </p>
+      </div>
       <div class="section">
-        <h3>Experience</h3>
-        <p><strong>IT-Incubator</strong> — Frontend Intern</p>
-        <!-- Add more EN content -->
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML, CSS, SCSS</li>
+          <li>JavaScript, TypeScript</li>
+          <li>React, Redux, Redux Toolkit</li>
+          <li>Axios, React Router DOM</li>
+          <li>Next.js, RTK Query</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2>Experience</h2>
+        <p><strong>IT-Incubator — Frontend Intern</strong></p>
+        <p>Participated in developing real-world apps using React & Redux</p>
       </div>
     </div>
 
     <div id="ru" class="resume-section">
       <h1>Фарход Мухамадиев</h1>
-      <h2>Фронтенд-разработчик</h2>
+      <p class="title">Frontend разработчик</p>
       <img src="images/farhod.jpg" alt="Фото Фархода" />
+      <div class="section contact">
+        <p>Email: farhodmuhamadiev4@gmail.com</p>
+        <p>Telegram: @farhodmuhamadiev68</p>
+        <p>GitHub: <a href="https://github.com/farabek">farabek</a></p>
+        <p>
+          Портфолио:
+          <a href="https://farabek.github.io/my-portfolio/">my-portfolio</a>
+        </p>
+        <p>
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/farhod-rustam/">farhod-rustam</a>
+        </p>
+        <p>Местоположение: Ташкент, Узбекистан</p>
+        <p>
+          Языки: Английский (средний), Русский (свободный), Узбекский (родной)
+        </p>
+      </div>
       <div class="section">
-        <h3>Опыт</h3>
-        <p><strong>IT-Incubator</strong> — Стажёр фронтенд-разработчик</p>
-        <!-- Add more RU content -->
+        <h2>Навыки</h2>
+        <ul>
+          <li>HTML, CSS, SCSS</li>
+          <li>JavaScript, TypeScript</li>
+          <li>React, Redux, Redux Toolkit</li>
+          <li>Axios, React Router DOM</li>
+          <li>Next.js, RTK Query</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2>Опыт</h2>
+        <p><strong>IT-Incubator — стажёр на позиции Frontend</strong></p>
+        <p>
+          Разработка учебных и боевых проектов с использованием React и Redux
+        </p>
       </div>
     </div>
 
     <script>
       function switchLang(lang) {
-        document
-          .querySelectorAll('.resume-section')
-          .forEach((div) => div.classList.remove('active'));
+        document.querySelectorAll('.resume-section').forEach((div) => {
+          div.classList.remove('active');
+        });
         document.getElementById(lang).classList.add('active');
       }
     </script>
