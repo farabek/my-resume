@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Farhod Mukhamadiev — Resume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+      body {
+        font-family: 'Inter', sans-serif;
+        margin: 0 auto;
+        padding: 20px;
+        max-width: 850px;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+      }
+
+      .lang-switch {
+        text-align: right;
+      }
+
+      .lang-switch button,
+      .print-btn {
+        padding: 6px 14px;
+        margin-left: 8px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        background-color: #2e3a59;
+        color: white;
+        font-weight: 600;
+        transition: background 0.3s;
+      }
+
+      .lang-switch button:hover,
+      .print-btn:hover {
+        background-color: #3f5180;
+      }
+
+      .print-btn {
+        background-color: #1d824c;
+      }
+
+      .print-btn:hover {
+        background-color: #14653a;
+      }
+
+      h1 {
+        color: #2e3a59;
+        font-size: 2rem;
+      }
+
+      h2 {
+        color: #2e3a59;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      img {
+        width: 140px;
+        border-radius: 10px;
+      }
+
+      .contact p,
+      .section p {
+        margin: 6px 0;
+      }
+
+      .section {
+        margin: 20px 0;
+      }
+
+      .section ul {
+        padding-left: 20px;
+        margin-top: 6px;
+      }
+
+      .resume-section {
+        display: none;
+      }
+
+      .resume-section.active {
+        display: block;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 15px;
+        }
+        img {
+          width: 100px;
+        }
+        .lang-switch {
+          text-align: center;
+        }
+      }
+
+      @media print {
+        .lang-switch,
+        .print-btn {
+          display: none;
+        }
+        body {
+          background-color: white;
+          color: black;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="lang-switch">
+        <button onclick="switchLang('en')">🇬🇧 EN</button>
+        <button onclick="switchLang('ru')">🇷🇺 RU</button>
+      </div>
+      <button class="print-btn" onclick="window.print()">
+        🖨 Print / Save as PDF
+      </button>
+    </header>
+
+    <div id="en" class="resume-section active">
+      <h1>Farhod Mukhamadiev</h1>
+      <h2>Frontend Developer</h2>
+      <img src="images/farhod.jpg" alt="Farhod's Photo" />
+      <div class="section">
+        <h3>Experience</h3>
+        <p><strong>IT-Incubator</strong> — Frontend Intern</p>
+        <!-- Add more EN content -->
+      </div>
+    </div>
+
+    <div id="ru" class="resume-section">
+      <h1>Фарход Мухамадиев</h1>
+      <h2>Фронтенд-разработчик</h2>
+      <img src="images/farhod.jpg" alt="Фото Фархода" />
+      <div class="section">
+        <h3>Опыт</h3>
+        <p><strong>IT-Incubator</strong> — Стажёр фронтенд-разработчик</p>
+        <!-- Add more RU content -->
+      </div>
+    </div>
+
+    <script>
+      function switchLang(lang) {
+        document
+          .querySelectorAll('.resume-section')
+          .forEach((div) => div.classList.remove('active'));
+        document.getElementById(lang).classList.add('active');
+      }
+    </script>
+  </body>
+</html>
