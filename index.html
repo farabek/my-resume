@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
       body {
         font-family: 'Inter', sans-serif;
@@ -65,8 +65,8 @@
       }
 
       .title {
-        font-size: 20px;
-        font-weight: 600;
+        font-size: 22px;
+        font-weight: 700;
         color: #555;
       }
 
@@ -135,10 +135,13 @@
     <div id="en" class="resume-section active">
       <h1>Farhod Mukhamadiev</h1>
       <p class="title">Frontend Developer</p>
-      <img src="images/farhod.jpg" alt="Farhod's Photo" />
+      <img src="images/farhod.jpg" alt="Photo of Farhod" />
       <div class="section contact">
         <p>Email: farhodmuhamadiev4@gmail.com</p>
-        <p>Telegram: @farhodmuhamadiev68</p>
+        <p>
+          Telegram:
+          <a href="https://t.me/farhodmuhamadiev68">t.me/farhodmuhamadiev68</a>
+        </p>
         <p>GitHub: <a href="https://github.com/farabek">farabek</a></p>
         <p>
           Portfolio:
@@ -148,7 +151,6 @@
           LinkedIn:
           <a href="https://www.linkedin.com/in/farhod-rustam/">farhod-rustam</a>
         </p>
-        <p>Location: Tashkent, Uzbekistan</p>
         <p>
           Languages: English (Intermediate), Russian (Fluent), Uzbek (Native)
         </p>
@@ -187,34 +189,61 @@
           <a href="https://www.linkedin.com/in/farhod-rustam/">farhod-rustam</a>
         </p>
         <p>Местоположение: Ташкент, Узбекистан</p>
+      </div>
+      <div class="section">
+        <h2>🔹 Обо мне</h2>
         <p>
-          Языки: Английский (средний), Русский (свободный), Узбекский (родной)
+          Я фронтенд-разработчик с опытом создания SPA на React, Redux, Redux
+          Toolkit и TypeScript. Командный игрок, сосредоточенный на росте и
+          чистом коде. Сейчас расширяю навыки с новыми технологиями.
         </p>
       </div>
       <div class="section">
-        <h2>Навыки</h2>
+        <h2>🧑‍💻 Опыт работы</h2>
+        <p><strong>IT-Incubator</strong> — Стажёр Frontend</p>
         <ul>
-          <li>HTML, CSS, SCSS</li>
-          <li>JavaScript, TypeScript</li>
-          <li>React, Redux, Redux Toolkit</li>
-          <li>Axios, React Router DOM</li>
-          <li>Next.js, RTK Query</li>
+          <li>Разработка SPA на React, Redux и TypeScript</li>
+          <li>Работа с REST API и Axios</li>
+          <li>Практика TDD и компонентов в Storybook</li>
+          <li>Agile-разработка и код-ревью</li>
         </ul>
       </div>
       <div class="section">
-        <h2>Опыт</h2>
-        <p><strong>IT-Incubator — стажёр на позиции Frontend</strong></p>
-        <p>
-          Разработка учебных и боевых проектов с использованием React и Redux
-        </p>
+        <h2>🛠 Технические навыки</h2>
+        <ul>
+          <li>Языки: TypeScript, JavaScript</li>
+          <li>Фреймворки: React, Next.js</li>
+          <li>Состояние: Redux, RTK, RTK Query</li>
+          <li>Стилизация: SCSS, CSS, Styled-Components, HTML</li>
+          <li>Формы: React Hook Form, Formik, Zod</li>
+          <li>UI: Radix UI, Material UI, Headless UI</li>
+          <li>Тестирование: Storybook, TDD</li>
+          <li>Сети: Axios, REST API</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2>🎓 Образование</h2>
+        <p>Курсы IT-Incubator — Frontend-разработка</p>
+      </div>
+      <div class="section">
+        <h2>🌐 Языки</h2>
+        <ul>
+          <li>Узбекский — Родной</li>
+          <li>Русский — Свободный</li>
+          <li>Английский — Средний</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2>📍 Локация</h2>
+        <p>Ташкент, Узбекистан</p>
       </div>
     </div>
 
     <script>
       function switchLang(lang) {
-        document.querySelectorAll('.resume-section').forEach((div) => {
-          div.classList.remove('active');
-        });
+        document
+          .querySelectorAll('.resume-section')
+          .forEach((div) => div.classList.remove('active'));
         document.getElementById(lang).classList.add('active');
       }
     </script>
